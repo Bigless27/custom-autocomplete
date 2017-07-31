@@ -1,3 +1,4 @@
+import { SearchFilterPipe } from './shared/filter-pipe';
 import { ClickOutsideDirective } from './shared/dropdown.directive';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,9 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   ],
   declarations: [
     AppComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    SearchFilterPipe
+
   ],
   providers: [
     ApiService
