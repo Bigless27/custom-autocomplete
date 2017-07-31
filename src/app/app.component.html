@@ -1,17 +1,26 @@
-<header>
-  <nav>
-    <a [routerLink]="['']">Home</a>
-    <a [routerLink]="['about']">About</a>
-  </nav>
+<header class='flex-container flex-center'>
+    <div class='width-25'></div>
+    <div class="width-half">
+        <i class='fa fa-search icon-pos color-purple'></i>
+        <input (click)='openDropDown()' class=' input-underline search-bar ' type="text">
+        <div clickOutside (clickOutside)="fireEvent()">
+            <div *ngIf='closeDropDown' class='search-drop-down'>
+                <div class='search-results' *ngFor="let s of states">
+                    {{s}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='width-25'></div>
 </header>
 <main>
-  <h1>Hello from {{title}}!</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/angular.png">
-
-  <router-outlet></router-outlet>
+    <div class='flex-container card-container flex-wrap flex-center '>
+        <div class='flex-container card-dimensions card flex-center width-100 ' *ngFor='let s of states '>
+            <div class='width-5 '></div>
+            {{s}}
+            <div class='width-5 '></div>
+        </div>
+    </div>
 </main>
 <footer>
-  <a [href]="url">Webpack Angular 2 Starter</a>
 </footer>

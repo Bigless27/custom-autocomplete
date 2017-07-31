@@ -1,8 +1,305 @@
-// styles in src/style directory are applied to the whole page
-body {
-    background: #0147A7;
-    color: #fff;
+// styles applied on :host are applied on the current component, "app" in this case
+:host {
+    display: block;
 }
-a {
-    color: #03A9F4;
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    height: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+//flex box
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0 !important;
+}
+
+.fill-height-or-more {
+    min-height: 100%
+}
+
+.flex-footer-pos {
+    flex: 1 0 auto;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-left {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
+
+.flex-column {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-center {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.flex-center-horz {
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.flex-center-vert {
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex-left-row {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.flex-right-row {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.flex-right-column {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.flex-left-column {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-space-between-row {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.flex-space-between-column {
+    align-items: space-between;
+    -webkit-align-itemst: space-between;
+}
+
+.width-half {
+    width: 50%;
+}
+
+.width-5 {
+    width: 5%;
+}
+
+.width-10 {
+    width: 10%;
+}
+
+.width-20 {
+    width: 20%;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.purple-bkgrd {
+    background: #752C8F;
+}
+
+.text-fade {
+    opacity: 0.4;
+    color: #fff
+}
+
+.marg-left-20 {
+    margin-left: 20px;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-10 {
+    height: 10%
+}
+
+.height-15 {
+    height: 15%
+}
+
+.height-20 {
+    height: 20%;
+}
+
+.height-30 {
+    height: 30%;
+}
+
+.height-25 {
+    height: 25%;
+}
+
+.height-50 {
+    height: 50%;
+}
+
+.height-70 {
+    height: 70%;
+}
+
+.height-80 {
+    height: 80%;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.padding-above-5 {
+    padding-top: 5px;
+}
+
+.padding-above-15 {
+    padding-top: 15px;
+}
+
+.padding-above-30 {
+    padding-top: 30px;
+}
+
+.padding-above-50 {
+    padding-top: 50px;
+}
+
+.padding-below-30 {
+    padding-bottom: 30px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-left-20px {
+    margin-left: 20px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+input:not([type]):hover:not([readonly]),
+input[type=text]:hover:not([readonly]),
+input[type=password]:hover:not([readonly]),
+input[type=email]:hover:not([readonly]),
+input[type=url]:hover:not([readonly]),
+input[type=time]:hover:not([readonly]),
+input[type=date]:hover:not([readonly]),
+input[type=datetime]:hover:not([readonly]),
+input[type=datetime-local]:hover:not([readonly]),
+input[type=tel]:hover:not([readonly]),
+input[type=number]:hover:not([readonly]),
+input[type=search]:hover:not([readonly]) {
+    border: 2px solid #777;
+}
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+{
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0 0 0 2px;
+    box-shadow: none;
+    box-sizing: content-box;
+    margin-top: 5px;
+}
+
+.input-underline {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.input-underline:hover {
+    border-bottom: 2px solid #777777 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
 }
