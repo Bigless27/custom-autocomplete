@@ -10,9 +10,9 @@ export class AppComponent implements OnInit {
 
   stateForm: FormGroup;
 
-  closeDropDown = false;
+  showDropDown = false;
   states = ['Alabama', 'Alaska',  'Arizona', 'Arkansas', 'California', 'Colorado',
-  'Connecticut', 'Delaware', 'District of Columbia', 'Federated States of Micronesia', 'Florida'
+  'Connecticut', 'Delaware', 'District of Columbia', 'Florida'
   , 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky'
   , 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
   'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina',
@@ -37,14 +37,14 @@ export class AppComponent implements OnInit {
 
  selectValue(value) {
    this.stateForm.patchValue({"search": value});
-   this.closeDropDown = true;
+   this.showDropDown = false;
  }
-  fireEvent() {
-    this.closeDropDown = !this.closeDropDown;
+  closeDropDown() {
+    this.showDropDown = !this.showDropDown;
   }
 
   openDropDown() {
-    this.closeDropDown = false;
+    this.showDropDown = false;
   }
 
   getSearchValue() {
