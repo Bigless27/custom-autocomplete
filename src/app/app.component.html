@@ -9,9 +9,9 @@
         </form>
         <div clickOutside (clickOutside)="closeDropDown()">
             <div *ngIf='showDropDown' class='search-drop-down '>
-                <div (click)='selectValue(s)' class='search-results ' *ngFor="let s of states | searchFilter: getSearchValue()">
-                    <a [innerHTML]="s | lowercase | letterBold: getSearchValue()">
-                        {{s}}
+                <div (click)='selectValue(s.name)' class='search-results ' *ngFor="let s of statesObj | searchFilter: getSearchValue(): 'name' ">
+                    <a [innerHTML]="s.name | lowercase | letterBold: getSearchValue()">
+                        {{s.name}}
                     </a>
                 </div>
             </div>
@@ -21,9 +21,9 @@
 </header>
 <main>
     <div class='flex-container card-container flex-wrap flex-center '>
-        <div class='flex-container card-dimensions card flex-center width-100 ' *ngFor='let s of states | searchFilter: getSearchValue()'>
+        <div class='flex-container card-dimensions card flex-center width-100 ' *ngFor="let s of statesObj | searchFilter: getSearchValue(): 'name' ">
             <div class='width-5 '></div>
-            {{s}}
+            {{s.name}}
             <div class='width-5 '></div>
         </div>
     </div>
