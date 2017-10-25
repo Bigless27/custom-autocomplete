@@ -11,7 +11,7 @@ export class SearchFilterPipe implements PipeTransform {
                          v[prop].toLowerCase().indexOf(search.toLowerCase()) !== -1
                          :
                          v.toLowerCase().indexOf(search.toLowerCase()) !== -1;
-                        });
+        });
          return solution;
     }
 };
