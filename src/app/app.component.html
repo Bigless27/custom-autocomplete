@@ -10,8 +10,8 @@
         <div clickOutside (clickOutside)="closeDropDown()">
             <div *ngIf='showDropDown' class='search-drop-down '>
                 <div (click)='selectValue(s)' class='search-results ' *ngFor="let s of states | searchFilter: getSearchValue()">
-                    <a [innerHTML]="s | letterBold: getSearchValue()">
-                           {{s}}
+                    <a [innerHTML]="s | lowercase | letterBold: getSearchValue()">
+                        {{s}}
                     </a>
                 </div>
             </div>
