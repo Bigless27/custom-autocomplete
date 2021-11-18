@@ -7,7 +7,7 @@
         <form [formGroup]='stateForm' autocomplete="new-password" novalidate>
             <input id='search' placeholder="Search for a state" formControlName='search' (click)=' openDropDown() ' class=' input-underline search-bar ' type='text'>
         </form>
-        <div clickOutside (clickOutside)="closeDropDown()">
+        <div clickOutside (clickOutside)="closeDropDown()" ignoreOnId="search">
             <div *ngIf='showDropDown' class='search-drop-down '>
                 <div (click)='selectValue(s)' class='search-results ' *ngFor="let s of states | searchFilter: getSearchValue()">
                     <a [innerHTML]="s | letterBold: getSearchValue()">

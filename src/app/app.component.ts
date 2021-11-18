@@ -37,14 +37,14 @@ export class AppComponent implements OnInit {
 
  selectValue(value) {
    this.stateForm.patchValue({"search": value});
-   this.showDropDown = false;
+   this.closeDropDown();
  }
   closeDropDown() {
-    this.showDropDown = !this.showDropDown;
+    this.showDropDown = false;
   }
 
   openDropDown() {
-    this.showDropDown = false;
+    this.showDropDown = true;
   }
 
   getSearchValue() {
